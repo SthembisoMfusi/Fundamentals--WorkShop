@@ -9,6 +9,15 @@ def add_student():
     Prompts the user to input student ID, name, and grade, 
     then adds the student to the students list.
     """
+    student_details  = {"name":[],"id":[],"grade":[]}
+    student_id = input("Please enter the student's id number: ")
+    student_grade = input("Please enter the student's grade: ")
+    student_name = input("Please enter the student's name: ")
+    student_details['name'].append(student_name)
+    student_details['grade'].append(student_grade)
+    student_details["id"].append(student_id)
+    return student_details
+
     # Get student ID, name, and grade from user input
     # Hint: Use input() to get the values
     
@@ -19,6 +28,7 @@ def add_student():
     # Hint: Use the append() method on the students list
     
     # Print a success message to confirm the student was added
+print(add_student())
 
 # Function to update a student's grade
 def update_student_grade():
@@ -72,5 +82,5 @@ def main_menu():
         # If the choice is not between 1 and 4, print an "Invalid choice" message
 
 # Run the program
-if __name__ == "__main__":
-    main_menu()
+# if __name__ == "__main__":
+#     main_menu()
