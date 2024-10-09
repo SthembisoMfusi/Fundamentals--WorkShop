@@ -9,13 +9,12 @@ def add_student():
     Prompts the user to input student ID, name, and grade, 
     then adds the student to the students list.
     """
-    student_details  = {"name":[],"id":[],"grade":[]}
+    
     student_id = input("Please enter the student's id number: ")
-    student_grade = input("Please enter the student's grade: ")
+    student_grade = str(input("Please enter the student's grade: ").upper())
     student_name = input("Please enter the student's name: ")
-    student_details['name'].append(student_name)
-    student_details['grade'].append(student_grade)
-    student_details["id"].append(student_id)
+    student_details  = {"name":student_name,"id": student_id,"grade":student_grade}
+    print('Student successfully recorded')
     return student_details
 
     # Get student ID, name, and grade from user input
