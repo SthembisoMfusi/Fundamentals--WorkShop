@@ -4,6 +4,7 @@
 # initalize a student variable with an empty list 
 
 # Function to add a new student
+students = []
 def add_student():
     """
     Prompts the user to input student ID, name, and grade, 
@@ -13,8 +14,9 @@ def add_student():
     student_id = input("Please enter the student's id number: ")
     student_grade = str(input("Please enter the student's grade: ").upper())
     student_name = input("Please enter the student's name: ")
-    student_details  = {"name":student_name,"id": student_id,"grade":student_grade}
+    student_details  = {"id": student_id, "name":student_name,"grade":student_grade}
     print('Student successfully recorded')
+    students.append(student_details)
     return student_details
 
     # Get student ID, name, and grade from user input
@@ -27,10 +29,14 @@ def add_student():
     # Hint: Use the append() method on the students list
     
     # Print a success message to confirm the student was added
-print(add_student())
+add_student()
+add_student()
+print(students)
 
 # Function to update a student's grade
 def update_student_grade():
+    student_update = input( "Please enter a student's ID: ")
+
     """
     Prompts the user for a student ID, searches for that student in the list, 
     and updates their grade if found.
